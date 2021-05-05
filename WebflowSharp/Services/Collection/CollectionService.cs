@@ -9,7 +9,7 @@ namespace WebflowSharp.Services.Collection
 {
     public class CollectionService : WebflowService
     {
-        public CollectionService(string shopAccessToken) : base(shopAccessToken)
+        public CollectionService(string apiToken) : base(apiToken)
         {
         }
 

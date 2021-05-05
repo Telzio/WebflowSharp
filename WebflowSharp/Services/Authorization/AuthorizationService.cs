@@ -9,7 +9,7 @@ namespace WebflowSharp.Services.Authorization
 {
     public class AuthorizationService : WebflowService
     {
-        public AuthorizationService(string shopAccessToken) : base(shopAccessToken)
+        public AuthorizationService(string apiToken) : base(apiToken)
         {
         }
 

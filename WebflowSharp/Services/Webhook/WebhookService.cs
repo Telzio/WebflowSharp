@@ -9,7 +9,7 @@ namespace WebflowSharp.Services.Webhook
 {
     public class WebhookService : WebflowService
     {
-        public WebhookService(string shopAccessToken) : base(shopAccessToken)
+        public WebhookService(string apiToken) : base(apiToken)
         {
         }
 

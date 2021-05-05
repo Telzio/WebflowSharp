@@ -9,7 +9,7 @@ namespace WebflowSharp.Services.Order
 {
     public class OrderService : WebflowService
     {
-        public OrderService(string shopAccessToken) : base(shopAccessToken)
+        public OrderService(string apiToken) : base(apiToken)
         {
         }
 

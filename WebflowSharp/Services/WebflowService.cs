@@ -30,10 +30,10 @@ namespace WebflowSharp.Services
         /// <summary>
         /// Creates a new instance of <see cref="WebflowService" />.
         /// </summary>
-        /// <param name="shopAccessToken">access token</param>
-        protected WebflowService(string shopAccessToken)
+        /// <param name="apiToken">access token</param>
+        protected WebflowService(string apiToken)
         {
-            _accessToken = shopAccessToken;
+            _accessToken = apiToken;
 
             // If there's a global execution policy it should be set as this instance's policy.
             // User can override it with instance-specific execution policy.

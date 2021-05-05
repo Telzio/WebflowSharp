@@ -7,7 +7,7 @@ namespace WebflowSharp.Services.Site
 {
     public class SiteService : WebflowService
     {
-        public SiteService(string shopAccessToken) : base(shopAccessToken)
+        public SiteService(string apiToken) : base(apiToken)
         {
         }
 
