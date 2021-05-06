@@ -1,24 +1,25 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using WebflowSharp.Services.Items.Models;
 
 namespace WebflowSharp.Entities
 {
     public class ItemQueryResponse
     {
         /// <summary>
-        /// 	List of Items within the Collection
+        /// List of Items within the Collection
         /// </summary>
         [JsonProperty("items")]
         public List<Item> CollectionItems { get; set; }
 
         /// <summary>
-        /// 	Number of items returned
+        /// Number of items returned
         /// </summary>
         [JsonProperty("count")]
         public long Count { get; set; }
 
         /// <summary>
-        /// 	The limit specified in the request (default: 100)
+        /// The limit specified in the request (default: 100)
         /// </summary>
         [JsonProperty("limit")]
         public long Limit { get; set; }

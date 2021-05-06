@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using WebflowSharp.Services.Collections.Models;
 
 namespace WebflowSharp.Entities
 {
@@ -11,7 +12,7 @@ namespace WebflowSharp.Entities
         public string Id { get; set; }
 
         /// <summary>
-        /// 	Boolean determining if the Field can be edited (some fields are automatically created and cannot be edited)
+        /// Boolean determining if the Field can be edited (some fields are automatically created and cannot be edited)
         /// </summary>
         [JsonProperty("editable")]
         public bool Editable { get; set; }
@@ -26,13 +27,13 @@ namespace WebflowSharp.Entities
         public string Type { get; set; }
 
         /// <summary>
-        /// 	Slug of the field in the URL structure of your site for template pages
+        /// Slug of the field in the URL structure of your site for template pages
         /// </summary>
         [JsonProperty("slug")]
         public string Slug { get; set; }
 
         /// <summary>
-        /// 	Name given to the field
+        /// Name given to the field
         /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }

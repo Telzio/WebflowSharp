@@ -1,101 +1,102 @@
 ﻿using System;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
+using WebflowSharp.Entities;
 
-namespace WebflowSharp.Entities
+namespace WebflowSharp.Services.Items.Models
 {
     public class Item
     {
         /// <summary>
-        /// 	Boolean determining if the Item is set to archived
+        /// Boolean determining if the Item is set to archived
         /// </summary>
-        [JsonProperty("_archived")]
+        [JsonPropertyName("_archived")]
         public bool Archived { get; set; }
 
         /// <summary>
-        /// 	Boolean determining if the Item is set to draft
+        /// Boolean determining if the Item is set to draft
         /// </summary>
-        [JsonProperty("_draft")]
+        [JsonPropertyName("_draft")]
         public bool Draft { get; set; }
 
-        [JsonProperty("color")]
+        [JsonPropertyName("color")]
         public string Color { get; set; }
 
-        [JsonProperty("featured")]
+        [JsonPropertyName("featured")]
         public bool Featured { get; set; }
 
         /// <summary>
-        /// 	Name given to the Item
+        /// Name given to the Item
         /// </summary>
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
-        [JsonProperty("post-body")]
+        [JsonPropertyName("post-body")]
         public string PostBody { get; set; }
 
-        [JsonProperty("post-summary")]
+        [JsonPropertyName("post-summary")]
         public string PostSummary { get; set; }
 
-        [JsonProperty("thumbnail-image")]
+        [JsonPropertyName("thumbnail-image")]
         public Image ThumbnailImage { get; set; }
 
-        [JsonProperty("main-image")]
+        [JsonPropertyName("main-image")]
         public Image MainImage { get; set; }
 
         /// <summary>
-        /// 	URL structure of the Item in your site. Note: Updates to an item slug will break all links referencing the old slug.
+        /// URL structure of the Item in your site. Note: Updates to an item slug will break all links referencing the old slug.
         /// </summary>
-        [JsonProperty("slug")]
+        [JsonPropertyName("slug")]
         public string Slug { get; set; }
 
         /// <summary>
-        /// 	Date Item was last updated
+        /// Date Item was last updated
         /// </summary>
-        [JsonProperty("updated-on")]
+        [JsonPropertyName("updated-on")]
         public DateTimeOffset UpdatedOn { get; set; }
 
         /// <summary>
-        /// 	User who made last change to Item
+        /// User who made last change to Item
         /// </summary>
-        [JsonProperty("updated-by")]
+        [JsonPropertyName("updated-by")]
         public string UpdatedBy { get; set; }
 
         /// <summary>
-        /// 	Date Item was created
+        /// Date Item was created
         /// </summary>
-        [JsonProperty("created-on")]
+        [JsonPropertyName("created-on")]
         public DateTimeOffset CreatedOn { get; set; }
 
         /// <summary>
-        /// 	User who created Item
+        /// User who created Item
         /// </summary>
-        [JsonProperty("created-by")]
+        [JsonPropertyName("created-by")]
         public string CreatedBy { get; set; }
 
         /// <summary>
-        /// 	Date Item was last published
+        /// Date Item was last published
         /// </summary>
-        [JsonProperty("published-on")]
+        [JsonPropertyName("published-on")]
         public DateTimeOffset PublishedOn { get; set; }
 
         /// <summary>
         /// User who last published Item
         /// </summary>
-        [JsonProperty("published-by")]
+        [JsonPropertyName("published-by")]
         public string PublishedBy { get; set; }
 
-        [JsonProperty("author")]
+        [JsonPropertyName("author")]
         public string Author { get; set; }
 
         /// <summary>
-        /// 	Unique identifier for the Collection the Item belongs within
+        /// Unique identifier for the Collection the Item belongs within
         /// </summary>
-        [JsonProperty("_cid")]
+        [JsonPropertyName("_cid")]
         public string CollectionId { get; set; }
 
         /// <summary>
-        /// 	Unique identifier for the Item
+        /// Unique identifier for the Item
         /// </summary>
-        [JsonProperty("_id")]
+        [JsonPropertyName("_id")]
         public string Id { get; set; }
 
         [JsonIgnore]
@@ -103,14 +104,5 @@ namespace WebflowSharp.Entities
 
         [JsonIgnore]
         public string SiteId { get; set; }
-    }
-
-    public class Image
-    {
-        [JsonProperty("fileId")]
-        public string FileId { get; set; }
-
-        [JsonProperty("url")]
-        public Uri Url { get; set; }
     }
 }
